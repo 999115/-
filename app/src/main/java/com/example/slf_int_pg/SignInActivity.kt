@@ -19,8 +19,6 @@ class SignInActivity : AppCompatActivity() {
         val btsignin = findViewById<Button>(R.id.bt_signin)
         val btsignup = findViewById<Button>(R.id.bt_signup_signup)
 
-
-
         btsignin.setOnClickListener {
             val goHomeActivity = Intent(this, HomeActivity::class.java)
 
