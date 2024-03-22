@@ -11,32 +11,32 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="[자기소개 페이지입니다!]"
         android:textSize="27sp"
         android:textStyle="bold"
         android:typeface="serif"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/iv_intro"
-        android:layout_height="200dp"
         android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/img_int1"
-        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/tv_name_print"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_id_print"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="이름"
-        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        android:text="ID"
+        android:textSize="23sp"
         android:textStyle="bold"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,25 +44,12 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_intro" />
 
     <TextView
-        android:id="@+id/tv_id_print"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_name_print"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="ID"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name_print" />
-
-    <TextView
-        android:id="@+id/tv_mbti_print"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="MBTI"
-        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        android:text="이름"
+        android:textSize="23sp"
         android:textStyle="bold"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,17 +57,43 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_id_print" />
 
     <TextView
-        android:id="@+id/tv_intro_print"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_mbti_print"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="한마디!"
-        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        android:text="MBTI"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_print" />
+
+    <TextView
+        android:id="@+id/tv_intro_print"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="소개 한마디!"
+        android:textSize="23sp"
         android:textStyle="bold"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_mbti_print" />
+
+    <TextView
+        android:id="@+id/tv_intro2_print"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="13dp"
+        android:text="어쩌구저쩌구"
+        android:textSize="20sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_intro_print" />
 
     <Button
         android:id="@+id/bt_end"
@@ -92,8 +105,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,36 +17,36 @@ class SignUpActivity : AppCompatActivity() {
         val username = findViewById<EditText>(R.id.et_name_signup)
         val userid = findViewById<EditText>(R.id.et_id_signup)
         val userpw = findViewById<EditText>(R.id.et_pw_signup)
+        val usermbti = findViewById<EditText>(R.id.et_mbti_signup)
+        val userintro = findViewById<EditText>(R.id.et_intro_signup)
         val btsignup = findViewById<Button>(R.id.bt_signup_signup)
 
         userid.setText(intent.getStringExtra("userid"))
         userpw.setText(intent.getStringExtra("userpw"))
 
         btsignup.setOnClickListener {
-            val goHomeActivity = Intent(this, SignUpActivity::class.java)
-//            val goSignInActivity = Intent(this, SignInActivity::class.java)
+            val goSignInActivity = Intent(this, SignInActivity::class.java)
 
-            if (username.text.isEmpty() ||userid.text.isEmpty() || userpw.text.isEmpty()){
+            if (username.text.isEmpty() || userid.text.isEmpty() || userpw.text.isEmpty()) {
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
 
-
+            val idData = userid.text.toString()
+            val pwData = userpw.text.toString()
             val nameData = username.text.toString()
-//            val nameData = username.text.toString()
+            val mbtiData = usermbti.text.toString()
+            val introData = userintro.text.toString()
 
-            goHomeActivity.putExtra("username",nameData)
-//            goHomeActivity.putExtra("username",nameData)
+            goSignInActivity.putExtra("userid", idData)
+            goSignInActivity.putExtra("userpw", pwData)
+            goSignInActivity.putExtra("username", nameData)
+            goSignInActivity.putExtra("usermbti", mbtiData)
+            goSignInActivity.putExtra("userintro", introData)
 
-//            val idData = userid.text.toString()
-//            val pwData = userpw.text.toString()
-//
-//            goSignInActivity.putExtra("userid", idData)
-//            goSignInActivity.putExtra("userpw", pwData)
-
-            finish()
+            startActivity(goSignInActivity)
         }
 
     }

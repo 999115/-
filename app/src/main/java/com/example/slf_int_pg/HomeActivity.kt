@@ -16,17 +16,19 @@ class HomeActivity : AppCompatActivity() {
         val username = findViewById<TextView>(R.id.tv_name_print)
         val userid = findViewById<TextView>(R.id.tv_id_print)
         val usermbti = findViewById<TextView>(R.id.tv_mbti_print)
+        val userintro = findViewById<TextView>(R.id.tv_intro2_print)
         val btEnd = findViewById<Button>(R.id.bt_end)
         val intImage = findViewById<ImageView>(R.id.iv_intro)
 
         var randomNum = (1..5).random()
-        val randomImage = resources.getIdentifier("img_int${randomNum}","drawable", packageName)
+        val randomImage = resources.getIdentifier("img_int${randomNum}", "drawable", packageName)
 
         intImage.setImageResource(randomImage)
 
         username.text = "이름 : " + intent.getStringExtra("username")
         userid.text = "아이디 : " + intent.getStringExtra("userid")
-        usermbti.text = "MBTI : " + intent.getStringExtra("userid")
+        usermbti.text = "MBTI : " + intent.getStringExtra("usermbti")
+        userintro.text = intent.getStringExtra("userintro")
 
         btEnd.setOnClickListener {
             finish()
