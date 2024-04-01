@@ -10,16 +10,17 @@ import android.widget.Toast
 import java.util.Locale
 
 class SignUpActivity : AppCompatActivity() {
+
+    val username: EditText by lazy { findViewById(R.id.et_name_signup) }
+    val userid = findViewById<EditText>(R.id.et_id_signup)
+    val userpw = findViewById<EditText>(R.id.et_pw_signup)
+    val usermbti = findViewById<EditText>(R.id.et_mbti_signup)
+    val userintro = findViewById<EditText>(R.id.et_intro_signup)
+    val btsignup = findViewById<Button>(R.id.bt_signup_signup)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
-
-        val username = findViewById<EditText>(R.id.et_name_signup)
-        val userid = findViewById<EditText>(R.id.et_id_signup)
-        val userpw = findViewById<EditText>(R.id.et_pw_signup)
-        val usermbti = findViewById<EditText>(R.id.et_mbti_signup)
-        val userintro = findViewById<EditText>(R.id.et_intro_signup)
-        val btsignup = findViewById<Button>(R.id.bt_signup_signup)
 
         userid.setText(intent.getStringExtra("userid"))
         userpw.setText(intent.getStringExtra("userpw"))
