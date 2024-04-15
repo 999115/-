@@ -5,6 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="40dp"
+    android:paddingBottom="40dp"
+    android:paddingEnd="40dp"
+    android:paddingStart="40dp"
     tools:context=".HomeActivity">
 
     <TextView
